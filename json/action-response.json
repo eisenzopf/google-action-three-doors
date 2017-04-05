@@ -1,0 +1,32 @@
+{
+  "conversation_token": "42",
+  "expect_user_response": true,
+
+  "expected_inputs": [
+    {
+      "input_prompt": {
+        "initial_prompts": [
+          {
+            "text_to_speech": "There are three doors. Which one do you open. Door one, two, or three?"
+          }
+        ],
+        "no_input_prompts": [
+          {
+            "text_to_speech": "Where to next? Say door one, two, or three. If you’re done, say stop."
+          },
+          {
+            "text_to_speech": "Which door would you like: one, two, or three?"
+          },
+          {
+            "text_to_speech": "Still thinking? Say one, two, or three."
+          }
+        ]
+      },
+      "possible_intents": [
+        {
+          "intent": "assistant.intent.action.TEXT"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "versionLabel": "3.0",
+  "agentInfo": {
+    "languageCode": "en-US",
+    "projectId": "three-doors-xxxx",
+    "voiceName": "male_1"
+  },
+  "actions": [
+    {
+      "description": "Launch intent",
+      "initialTrigger": {
+        "intent": "assistant.intent.action.MAIN"
+      },
+      "httpExecution": {
+        "url": "https://us-central1-three-doors-xxxx.cloudfunctions.net/three_doors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "three-doors",
+  "description": "An adventure game that generates random rooms",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache Version 2.0",
+  "author": "Jonathan Eisenzopf <ironbraid74@gmail.com>",
+  "engines": {
+    "node": "~4.2"
+  },
+  "scripts": {
+    "lint": "semistandard --fix \"**/*.js\"",
+    "start": "functions deploy three-doors --trigger-http",
+    "deploy": "gcloud beta functions deploy three-doors --trigger-http --stage-bucket gs://three-doors-xxxx"
+  },
+  "dependencies": {
+     "lodash": "4.x"
+  },
+  "devDependencies": {
+    "semistandard": "^9.1.0"
+  }
+}
