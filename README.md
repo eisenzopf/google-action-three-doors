@@ -117,11 +117,11 @@ cd google-action-three-doors
 
 The key source code files are:
 
-\-action.json
+action.json
 
-\-index.js
+index.js
 
-\-json/
+json/
 
 package.json
 
