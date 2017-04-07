@@ -70,11 +70,7 @@ Without getting too detailed, the way a Google Home device works is that it
 captures your voice intent on the Google Action Platform and translates this to
 text.
 
- 
-
-![](../../../../../Google Drive/Discourse.ai/Articles/conversation-api.png)
-
- 
+![alt tag](./conversation-api.png)
 
 1.  The Google Action Platform attempts to match the Intent to an Action in the
     directory and then to an Action endpoint. As a developer, when you’re ready
@@ -104,7 +100,44 @@ creating a new directory for our code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 mkdir three-doors
+cd three-doors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ 
+
+Clone three-doors from GitHub
+=============================
+
+Now you can clone the code for this tutorial from GitHub:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+git clone https://github.com/eisenzopf/google-action-three-doors.git
+cd google-action-three-doors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The key source code files are:
+
+action.json
+
+index.js
+
+json/
+
+package.json
+
+ 
+
+Install Node.js packages
+========================
+
+Next run:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This should install all of the Node.js package dependencies that you need for
+the project.
 
  
 
@@ -155,7 +188,7 @@ the `gcloud` will be ready to go.
 
  
 
-**2. **Now we will create a new Google Action project using the `gcloud` CLI
+**2.** Now we will create a new Google Action project using the `gcloud` CLI
 from a terminal window from within your project directory. Run:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -170,7 +203,7 @@ alpha command and may change. You can alternatively create a new project in the
 
  
 
-**3. **To confirm the project was created, run:
+**3.** To confirm the project was created, run:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 gcloud projects list
@@ -181,7 +214,7 @@ project that was created when you ran `cloud init` command.
 
  
 
-**4. **Change current project to the created project by running:
+**4.** Change current project to the created project by running:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 gcloud config set project three-doors-xxxx
@@ -205,7 +238,7 @@ You should be able to see the newly created bucket by running the command
 
  
 
-**6. **Set billing for the project. Make sure that a billing account is
+**6.** Set billing for the project. Make sure that a billing account is
 associated with the project by visiting
 
 `https://console.developers.google.com/project/three-doors-xxxx/settings` where
@@ -213,7 +246,7 @@ xxxx is the 4 numbers you chose when creating the project.
 
  
 
-**7. **Lastly, we need to add the Google Action API to the project. This can be
+**7.** Lastly, we need to add the Google Action API to the project. This can be
 done from the Google Cloud Platform Console at
 <https://console.cloud.google.com>.
 
@@ -257,7 +290,7 @@ your **Google Action** application.
 
  
 
-**1. **First point your browser to
+**1.** First point your browser to
 <https://developers.google.com/actions/tools/gactions-cli> and download the
 gactions command-line tool.
 
@@ -276,7 +309,7 @@ gactions command-line tool.
 
  
 
-**2. **Next change permissions for gactions to executable:
+**2.** Next change permissions for gactions to executable:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 chmod +x gactions
@@ -284,7 +317,7 @@ chmod +x gactions
 
  
 
-**3. **Within your project directory, initialize the tool inside a terminal
+**3.** Within your project directory, initialize the tool inside a terminal
 window:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
