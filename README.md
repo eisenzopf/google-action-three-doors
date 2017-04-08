@@ -117,7 +117,7 @@ cd google-action-three-doors
 
 The key source code files are:
 
-action.json
+action.json.bak
 
 index.js
 
@@ -224,21 +224,7 @@ gcloud config set project three-doors-xxxx
 
  
 
-**5.** Create a Google Cloud Storage Bucket to store your Google Functions
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gsutil mb gs://three-doors-xxxx
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
->   Note: Replace `xxxx` with the four numbers you chose above.
-
-This will provision a new Storage Bucket to host your code on the Google Cloud.
-You should be able to see the newly created bucket by running the command
-`gsutil ls`
-
- 
-
-**6.** Set billing for the project. Make sure that a billing account is
+**5.** Set billing for the project. Make sure that a billing account is
 associated with the project by visiting
 
 `https://console.developers.google.com/project/three-doors-xxxx/settings` where
@@ -246,7 +232,7 @@ xxxx is the 4 numbers you chose when creating the project.
 
  
 
-**7.** Lastly, we need to add the Google Action API to the project. This can be
+**6.** Lastly, we need to add the Google Action API to the project. This can be
 done from the Google Cloud Platform Console at
 <https://console.cloud.google.com>.
 
@@ -270,12 +256,26 @@ done from the Google Cloud Platform Console at
 -   At the top middle of the new page, click **ENABLE**.
 
 -   Go back to the search box and type *Function* and you should see **Google
-    Functions API**. Click on it.
+    Cloud Functions API**. Click on it.
 
 -   At the top middle of the new page, click **ENABLE**.
 
 The Google Actions API and Functions API are now enabled for your new project in
 the Google Cloud environment.
+
+ 
+
+**7.** Create a Google Cloud Storage Bucket to store your Google Functions
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gsutil mb gs://three-doors-xxxx
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>   Note: Replace `xxxx` with the four numbers you chose above.
+
+This will provision a new Storage Bucket to host your code on the Google Cloud.
+You should be able to see the newly created bucket by running the command
+`gsutil ls`
 
  
 
@@ -321,7 +321,7 @@ chmod +x gactions
 window:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gactions init
+./gactions init
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This will create a default `action.json` file in your project directory. Now we
