@@ -44,6 +44,9 @@ To make this work, all you’ll need is:
 
 -   Java 1.7 or later
 
+-   a Google Gmail account (recommended but not required if you want the web
+    simulator to work)
+
  
 
 >   If you don’t have a Google Home device and/or Node.js, see the Reference
@@ -396,22 +399,31 @@ gcloud beta functions deploy three_doors --trigger-http --stage-bucket gs://thre
 
 >   Note: Replace `xxxx` with the four numbers you chose above.
 
-If this is the first time you’ve deployed the application, it will take some
-time; as much as 5 minutes. Don’t worry, updates don’t take nearly as long so
-it’s worth the wait of not having to manage your own servers.
+This will deploy your Google Function, which is contained in the `index.js`
+source file (we’ll talk about that next time), into the Google Cloud. If this is
+the first time you’ve deployed the application, it will take some time; as much
+as 5 minutes. Don’t worry, updates don’t take nearly as long so it’s worth the
+wait of not having to manage your own servers.
 
  
 
 Deploy your action.json test file
 ---------------------------------
 
+Next, it’s time to use the command-line or web simulator to test your new Action
+on Google. Use the command below. If this is the first time running the command,
+you may see instructions to enter a security token, so be sure to read and
+follow the instructions.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ./gactions preview --action_package action.json --invocation_name "three doors" --preview_mins 1234
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This allows you to test the application in the command-line or web simulator or
-on your Google Home device. The google email you used to set up your cloud
-project will need to be the same account that manages your Google Home device.
+Running the `gactions` command above will temporarily turn on your new Action of
+Google temporarily. Only you will be able to test it. This allows you to test
+the application in the command-line or web simulator or on your Google Home
+device. The google email you used to set up your cloud project will need to be
+the same account that manages your Google Home device.
 
  
 
@@ -421,6 +433,9 @@ Test your action
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ./gactions simulate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You may also be instructed to turn on audio in your Google account; if you do,
+just follow the instructions.
 
  
 
@@ -443,6 +458,11 @@ Congratulations!
 You just set up and deployed your first Action on Google. I’ve included a list
 of references below. In the next article in the series, we will look at the code
 and understand more how it works.
+
+ 
+
+Please share this article if you found it useful or message me on twitter
+\@eisenzopf
 
  
 
