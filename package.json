@@ -6,7 +6,7 @@
   "license": "Apache Version 2.0",
   "author": "Jonathan Eisenzopf <ironbraid74@gmail.com>",
   "engines": {
-    "node": "~4.2"
+    "node": ">=4.2"
   },
   "scripts": {
     "lint": "semistandard --fix \"**/*.js\"",
